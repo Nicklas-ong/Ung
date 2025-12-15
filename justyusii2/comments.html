@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Website of Ung Yin Sin">
+    <title>Comments | Ginkgo</title>
+    <link rel="stylesheet" href="comments.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="bg-animation"></div>
+    <header>
+      <h1 class="centered-text">Ung Yin Sin</h1>
+    </br>
+      <nav class="slide-down" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="yinsin.html">主页</a></li>
+          <li><a href="professions.html">专长</a></li>
+          <li><a href="history.html">历史</a></li>
+          <li><a href="comments.html" class="active">留言</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="comments-container">
+        <div class="comments-header">
+            <h2><i class="fas fa-comments"></i> 留言板 | Comments Board</h2>
+            <p class="subtitle">分享你的想法，我会认真阅读每一份留言</p>
+            <p class="subtitle">Share your thoughts, I'll read every comment carefully</p>
+        </div>
+
+        <div class="form-section">
+            <div class="form-card">
+                <h3><i class="fas fa-pen"></i> 写下留言</h3>
+                <form id="commentForm">
+                    <div class="form-group">
+                        <label for="name"><i class="fas fa-user"></i> 姓名 / Name</label>
+                        <input type="text" id="name" name="name" placeholder="请输入您的姓名" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> 邮箱 / Email (可选)</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="comment"><i class="fas fa-comment-dots"></i> 留言内容 / Comment</label>
+                        <textarea id="comment" name="comment" rows="5" placeholder="请在这里写下您的留言..." required></textarea>
+                        <div class="char-counter">
+                            <span id="charCount">0</span>/500
+                        </div>
+                    </div>
+                    
+                    <div class="rating-section">
+                        <p><i class="fas fa-star"></i> 评分 / Rating</p>
+                        <div class="stars">
+                            <span class="star" data-value="1">★</span>
+                            <span class="star" data-value="2">★</span>
+                            <span class="star" data-value="3">★</span>
+                            <span class="star" data-value="4">★</span>
+                            <span class="star" data-value="5">★</span>
+                        </div>
+                        <input type="hidden" id="rating" name="rating" value="0">
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> 提交留言
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="comments-display">
+            <h3><i class="fas fa-history"></i> 历史留言</h3>
+            <div class="comments-list" id="commentsList">
+                <!-- Comments will be loaded here -->
+                <div class="empty-state">
+                    <i class="fas fa-comment-slash"></i>
+                    <p>还没有留言，成为第一个留言的人吧！</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <i class="fas fa-check-circle success-icon"></i>
+            <h3>留言提交成功！</h3>
+            <p>感谢您的留言，我已经收到您的反馈。</p>
+            <button id="modalOkBtn" class="modal-btn">确定</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>Website for <strong>Ung Yin Sin</strong> | Created by NOJC</p>
+        <p class="footer-note">© 2025 Personal Project | Hope you don't mind and like it</p>
+        <div class="footer-links">
+          <a href="yinsin.html">Home</a> | 
+          <a href="history.html">History</a> | 
+          <a href="comments.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="comments.js"></script>
+</body>
+</html>
